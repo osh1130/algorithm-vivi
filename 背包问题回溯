@@ -1,0 +1,14 @@
+"""回溯查看最大价值的组成"""
+j = total
+i = len(num) 
+ans = []
+while not(i==0 and j==0):
+    print(j)
+    if list_value[i][j] == list_value[i-1][j]:
+        i-=1
+    else:
+        ans.append(i)
+        j -= v[i-1]
+        i -= 1
+        
+print(ans)      
